@@ -1,7 +1,7 @@
 import random
 
 class RandomTest:
-
+        
     def createRngList(self):
         if self.rnglist == []:    
             for i in range(10):
@@ -19,15 +19,21 @@ class RandomTest:
         random.seed(self.seed)
 
         # create the rnglist
+        # Q? Why is this out in the open, and not in main?
         self.rnglist = []
         self.rnglist = self.createRngList()
 
-        # on init, create the rnglist
-        #self.createRngList()
+    def randomtest_True(self, method = lambda x:x, *expected):
+        # it's more complicated than this.
+        # gotta-be.
+        results = []
+        #non_results = []
+        i = len(expected)
+        for x in range(i):
+            if (method == expected[x]):
+                results.append(expected[x])
+            #else:
+                #non_results = expected[x].append()
+        return results == expected
 
 
-
-
-myObj = RandomTest()
-myObj.createRngList()
-print(myObj.rnglist)
