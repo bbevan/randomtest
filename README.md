@@ -1,2 +1,2 @@
 # randomtest
-Seeks to extend unittest by testing functions with random outputs.
+Seeks to extend unittest by testing object methods with random outputs.
